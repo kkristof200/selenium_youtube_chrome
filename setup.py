@@ -10,7 +10,7 @@ else:
 
 setuptools.setup(
     name='selenium_youtube_chrome',
-    version='0.0.1',
+    version='0.0.2',
     author='Kristóf-Attila Kovács',
     description='selenium_youtube_chrome',
     long_description=long_description,
@@ -18,8 +18,8 @@ setuptools.setup(
     url='https://github.com/kkristof200/selenium_youtube_chrome',
     packages=setuptools.find_packages(),
     install_requires=[
-        'kproxy>=0.0.1',
-        'selenium-chrome>=0.0.18',
+        'kproxy>=0.0.2',
+        'selenium-chrome>=0.0.28',
         'selenium-youtube>=2.0.3'
     ],
     classifiers=[
