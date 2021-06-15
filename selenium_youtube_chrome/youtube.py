@@ -66,6 +66,7 @@ class Youtube(SeleniumYoutube):
                 profile_path=profile_path,
                 profile_id=profile_id,
 
+                # cookies
                 pickle_cookies=pickle_cookies,
 
                 # proxy
