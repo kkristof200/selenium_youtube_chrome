@@ -22,9 +22,11 @@ class Youtube(SeleniumYoutube):
     def __init__(
         self,
         
+        # profile
+        profile_path: Optional[str] = None,
+        profile_id: Optional[str] = None,
+
         # cookies
-        cookies_folder_path: Optional[str] = None,
-        cookies_id: Optional[str] = None,
         pickle_cookies: bool = False,
 
         # proxy
@@ -35,7 +37,6 @@ class Youtube(SeleniumYoutube):
 
         # other paths
         chromedriver_path: Optional[str] = None,
-        profile_path: Optional[str] = None,
 
         # chrome option settings
         private: bool = False,
@@ -62,8 +63,9 @@ class Youtube(SeleniumYoutube):
     ):
         super().__init__(
             browser=Chrome(
-                cookies_folder_path=cookies_folder_path,
-                cookies_id=cookies_id,
+                profile_path=profile_path,
+                profile_id=profile_id,
+
                 pickle_cookies=pickle_cookies,
 
                 # proxy
@@ -74,7 +76,6 @@ class Youtube(SeleniumYoutube):
 
                 # other paths
                 chromedriver_path=chromedriver_path,
-                profile_path=profile_path,
 
                 # chrome option settings
                 private=private,
