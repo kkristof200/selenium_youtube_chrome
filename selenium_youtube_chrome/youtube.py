@@ -51,7 +51,7 @@ class Youtube(SeleniumYoutube):
         home_page_url: Optional[str] = None,
 
         # selenium-wire support
-        webdriver_class: Optional = None,
+        webdriver_class = None,
 
         # find function
         default_find_func_timeout: int = 2.5,
@@ -59,7 +59,9 @@ class Youtube(SeleniumYoutube):
         # login
         prompt_user_input_login: bool = True,
         login_prompt_callback: Optional[Callable[[str], None]] = None,
-        login_prompt_timeout_seconds: int = 60*5
+        login_prompt_timeout_seconds: int = 60*5,
+
+        update_chromedriver: bool = False
     ):
         super().__init__(
             browser=Chrome(
@@ -95,6 +97,8 @@ class Youtube(SeleniumYoutube):
 
                 # find function
                 default_find_func_timeout=default_find_func_timeout,
+
+                update_chromedriver=update_chromedriver
             ),
             prompt_user_input_login=prompt_user_input_login,
             login_prompt_callback=login_prompt_callback,

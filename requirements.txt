@@ -1,3 +1,3 @@
 kproxy==0.0.1
-selenium-chrome==0.0.20
+selenium-chrome==0.0.25
 selenium-youtube==2.0.3
